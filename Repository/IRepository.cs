@@ -12,6 +12,8 @@ namespace BileApi.Repository
 
         public List<T> Read();
 
+        public T ReadById(int id);
+
         public int Update(int id, T model);
         public int Delete(int id);
     }

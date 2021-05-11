@@ -12,7 +12,11 @@ namespace BileApi.Service
 
         public List<Person> Read();
 
+        public Person ReadById(int id);
+
         public int Update(int id, Person person);
         public int Delete(int id);
+
+        
     }
 }

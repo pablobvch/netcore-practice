@@ -30,6 +30,11 @@ namespace BileApi.Service
             return _repository.Read();
         }
 
+        public Person ReadById(int id)
+        {
+            return _repository.ReadById(id);
+        }
+
         public int Update(int id, Person person) {
             return _repository.Update(id, person);
         }

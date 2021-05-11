@@ -56,6 +56,26 @@ namespace BileApi.Controllers
 
         }
 
+        [HttpGet]
+        [Route("[controller]/{id}")]
+        public IActionResult GetById(int id)
+        
+        {
+            try
+            {
+                var data = _personService.ReadById(id);
+
+                return Ok(data);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
+
+        }
+
+
         [HttpPut]
         [Route("[controller]/{id}")]
         public IActionResult Put(int id, [FromBody] Person person)

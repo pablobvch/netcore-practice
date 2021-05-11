@@ -3,7 +3,7 @@ using BileApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Reflection;
 
 namespace BileApi.Repository
 {
@@ -26,6 +26,11 @@ namespace BileApi.Repository
         public List<T> Read()
         {
             return _context.Set<T>().ToList();
+        }
+
+        public T ReadById(int id)
+        {
+            return _context.Set<T>().FirstOrDefault(x => x.Id == id);
         }
 
         public int Update(int id, T model)
