@@ -9,15 +9,15 @@ namespace BileApi.Models
 {
     public class Person : BaseEntity
     {
-        //public Person()
-        //{
+        public Person()
+        {
               
-        //    MyHappyDate = DateOfBirth.HappyDate();
-        //}
-
+        }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string MyHappyDate { get; set; }
+
+        public List<Credential> Credentials { get; set; }
     }
 }
